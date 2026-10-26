@@ -19,7 +19,11 @@ ds <- tibble(id, x, y, z)
 #The function should take a vector as input and return the replaced-vector as an output
 #Then, run the function on x and save the results to a new vector "x_replace" to show it worked
 
+limit_replace <- function(x) {
+  ifelse(x < 2|x > 8, NA, x)
+}
 
+limit_replace(x)
 
 
 ### Question 2 ---------- 
