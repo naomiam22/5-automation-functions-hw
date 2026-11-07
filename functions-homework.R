@@ -23,14 +23,34 @@ limit_replace <- function(x) {
   ifelse(x < 2|x > 8, NA, x)
 }
 
-limit_replace(x)
-
+x_replace <- limit_replace(x)
+x_replace
+s
 
 ### Question 2 ---------- 
 
 #Make a new version of limit_replace includes arguments for a lower boundary and an upper boundary
 #so that the limits can be specified (instead of being hard coded as 2 and 8)
 #Run the function on vector y with boundaries 4 and 6, saving the results to a new vector "y_replace"
+
+limit_replace_V2 <- 
+  function(a,b,x) {
+    a <- ifelse(x < a, NA, x)
+    b <- ifelse(x > b, NA, x)
+  }
+
+x_replace_2 <- limit_replace_V2(2, 8, x)
+x_replace_2
+
+
+limit_replace_V2 <- 
+  function(a,b,y) {
+    a <- ifelse(y < a, NA, y)
+    b <- ifelse(y > b, NA, y)
+  }
+
+y_replace <- limit_replace_V2(4, 6, y)
+y_replace
 
 
 ### Question 3 ----------
@@ -41,6 +61,8 @@ limit_replace(x)
 #Make num_of_SDs default to 1
 #The output should be a named list two values, lower and upper.
 #Running plus_minus_SD(x) should produce: $lower 2.142724 $upper 8.048324
+
+
 
 
 ### Question 4 ----------
