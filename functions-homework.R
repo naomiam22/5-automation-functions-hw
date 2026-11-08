@@ -25,7 +25,7 @@ limit_replace <- function(x) {
 
 x_replace <- limit_replace(x)
 x_replace
-s
+
 
 ### Question 2 ---------- 
 
