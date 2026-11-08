@@ -62,11 +62,22 @@ y_replace
 #The output should be a named list two values, lower and upper.
 #Running plus_minus_SD(x) should produce: $lower 2.142724 $upper 8.048324
 
+sd_na <- function(x) sd(x, na.rm = T)
 
+plus_minus_SD <- 
+  function(x, num_of_SDs) {
+  sd = sd_na(x)
+}
+
+SD_output <- plus_minus_SD(x,1)  
+SD_output
 
 
 ### Question 4 ----------
 # Use a map function to run the new function on x, y, and z with 1 SD
+ds <- c(x, y, z)
+SD_mapoutput <- map(ds, ~sd(ds, na.rm = T))
+SD_mapoutput
 
 
 ### Question 5 ----------
